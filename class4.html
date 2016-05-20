@@ -51,21 +51,21 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				
+
 				<!-- Opening slide -->
 				<section>
 					<img src="img/circle-gdi-logo.png" class="plain">
 					<h3>HTML and CSS 101</h3>
 					<h4>Class 4</h4>
 				</section>
-								
+
 				<section>
 					<h3>Static Positioning</h3>
 					<p>HTML elements are positioned static by default.</p>
 					<p>Static elements are positioned in the normal ﬂow of the page</p>
 					<p>Static elements ignore top, bottom, right or left property specifications.</p>
 				</section>
-			 
+
 				<section>
 					<h3>Static Positioning</h3>
 					<p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
@@ -92,7 +92,7 @@
 					<img src="img/cupcake3.png">
 					<img src="img/cupcake4.png">
 				</section>
-			 
+
 				<section>
 					<h3>Static Positioning</h3>
 					<p>In normal flow, block boxes flow from top to bottom, making a new line after every box.</p>
@@ -120,9 +120,9 @@
 	margin: 5%;
 	padding: 40px;
 	width: 20%;
-}</code></pre>				 
+}</code></pre>
 				</section>
-			 
+
 			 <!-- Relative Positioning-->
 				<section>
 					<h3>Relative Positioning</h3>
@@ -136,10 +136,10 @@
 					<h3>Relative Positioning</h3>
 					<p>The relative value keeps an element in the normal flow, but offsets it according to top/left/right/bottom properties.</p>
 <pre><code class="css">.relative {
-	position: relative; 
-	left: 80px; 
+	position: relative;
+	left: 80px;
 	top: 20px;
-	height: 100px; 
+	height: 100px;
 	background-color: yellow;
 }</code></pre>
 					<div style="border:2px solid black;">
@@ -158,7 +158,7 @@
 	color: white;
 	margin: 5%;
 	padding: 40px;
-	position: relative: 
+	position: relative:
 	top: -.5em;
 	right: 10%;
 	bottom: auto;
@@ -167,7 +167,7 @@
 }</code></pre>
 					<p>Once it is relatively positioned, we can add top, right, bottom, and left as indicated above to offset it from the normal flow.</p>
 				</section>
-			 
+
 				<!-- Absolute positioning-->
 				<section >
 					<h3>Absolute Positioning</h3>
@@ -180,20 +180,20 @@
 						<li>Determined by its offset values in the properties top, bottom, right and left.</li>
 					</ul>
 				</section>
-			 
+
 				<section  style="border: 1px solid black">
 					<h3>Absolute Positioning</h3>
 					<p>The absolute value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
 <pre><code class="css">.top {
-	position: absolute; 
-	top: -40px; 
-	right: 10px; 
+	position: absolute;
+	top: -40px;
+	right: 10px;
 	background-color: yellow;
 }</code></pre>
 <pre><code class="css">.bottom {
-	position: absolute; 
-	bottom: -40px; 
-	left:60px; 
+	position: absolute;
+	bottom: -40px;
+	left:60px;
 	background-color: green;
 	color: white;
 }</code></pre>
@@ -244,19 +244,19 @@
 						<p>The element with highest <code>z-index</code> goes on top.</p>
 					</div>
 <pre><code class="css">.bottom {
-	position: absolute; 
-	bottom: 10px; 
-	left:60px; 
+	position: absolute;
+	bottom: 10px;
+	left:60px;
 	background-color: yellow;
 }</code></pre>
 <pre><code class="css">.top {
-	position: absolute; 
-	bottom: 15px; 
-	left:60px; 
-	background-color: green; 
+	position: absolute;
+	bottom: 15px;
+	left:60px;
+	background-color: green;
 	z-index: 2;
 }</code></pre>
-					<div style="position:absolute;bottom:-20px;left:60px;background-color:yellow;color:black"> 
+					<div style="position:absolute;bottom:-20px;left:60px;background-color:yellow;color:black">
 						Bottom
 					</div>
 					<div style="position:absolute;bottom:-15px;left:60px;background-color:green;z-index:2;">
@@ -320,15 +320,15 @@
 					<div class="align-left">Not floating element</div>
 					<div class="align-left">Not floating element with wrapping Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 				</section>
-			 
+
 				<section>
-					<h3>Side by side elements</h3>	
+					<h3>Side by side elements</h3>
 					<p>If you want two block level elements to be side by side, you may float both elements. One left, and one right.</p>
 					<img src="img/example-float-column.png" class="plain">
 				</section>
 
 				<section>
-					<h3>Side by side elements</h3> 
+					<h3>Side by side elements</h3>
 					<p>If you want two or more block level elements to be side by side, you can use <code>float: left</code> on all the elements.</p>
 					<img src="img/example-left-float.jpg" style="float:left;">
 					<img src="img/example-left-float.jpg" style="float:left;">
@@ -347,8 +347,8 @@
 <pre><code class="css">clear: right;
 clear: left;
 clear: both;</code></pre>
-				</section> 
-			 
+				</section>
+
 				<section>
 					<h3>Clear</h3>
 <pre><code class="css">.float {
@@ -368,7 +368,7 @@ clear: both;</code></pre>
 					<div class="align-left">Not floating element</div>
 					<div class="align-left" style="clear:left;">Non-floating element with a class of <code>.clear-left</code></div>
 				</section>
-		 
+
 				<!-- Exercise -->
 				<section>
 					<h3>Let's Develop It</h3>
@@ -378,7 +378,7 @@ clear: both;</code></pre>
 						<li>You may have to make the width smaller so everything fits</li>
 						<li>The header <code>div</code> should appear above and the footer <code>div</code> below the sidebar and content area.
 					</ol>
-				</section>       
+				</section>
 
 				<!-- Question -->
 				<section>
@@ -387,8 +387,8 @@ clear: both;</code></pre>
 
 				<section>
 					<h2>Keep in Touch</h2>
-					<a href="http://gdila.org/">GDILA.org</a> | 
-					<a href="https://www.facebook.com/groups/gdila/">Facebook</a> | 
+					<a href="http://gdila.org/">GDILA.org</a> |
+					<a href="https://www.facebook.com/groups/gdila/">Facebook</a> |
 					<a href="https://twitter.com/girldevelopitla">Twitter</a>
 					<br/><br/>
 					<h2>More Learning</h2>
@@ -406,7 +406,7 @@ clear: both;</code></pre>
 				<section>
 					<h2>Survey </h2>
 					<p>Please let us know how you liked the class and any suggestions you may have before you leave. Thank you! :)</p>
-					<p><a style="font-size:1.5em;" href="https://goo.gl/oRUYso">https://goo.gl/oRUYso</a></p>
+					<p><a style="font-size:1.5em;" href="https://goo.gl/dARwh8">Take the survey</a></p>
 					<p>I will send an email in the next day with the example files and PDF. Thank you for being a part of this class!</p>
 					<p>Class files and slides will be available at:<br/>
 					<a href="http://gdila.org/html101">gdila.org/html101</a></p>
