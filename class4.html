@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Class 4 ~ HTML/CSS 101 ~ Girl Develop It</title>
+
+		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
+
+		The course is meant to be taught in 4 or 6 two-hour sections. If you are teaching a 4 section course, you can ignore classes 5 and 6 without losing any impact or information. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="css/content.css">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link= document.createElement( 'link' );
+				link.rel= 'stylesheet';
+				link.type= 'text/css';
+				link.href= 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				<!-- Opening slide -->
+				<section>
+					<img src="img/circle-gdi-logo.png" class="plain">
+					<h3>HTML and CSS 101</h3>
+					<h4>Class 4</h4>
+				</section>
+								
+				<section>
+					<h3>Static Positioning</h3>
+					<p>HTML elements are positioned static by default.</p>
+					<p>Static elements are positioned in the normal ﬂow of the page</p>
+					<p>Static elements ignore top, bottom, right or left property specifications.</p>
+				</section>
+			 
+				<section>
+					<h3>Static Positioning</h3>
+					<p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
+<pre><code class = "html">&lt;img src="images/cookie1.png"/>
+&lt;img src="images/cookie2.png"/>
+&lt;img src="images/cookie3.png"/>
+...
+&lt;img src="images/cookie2.png"/>
+&lt;img src="images/cookie3.png"/></code></pre>
+					<img src="img/cupcake1.png">
+					<img src="img/cupcake2.png">
+					<img src="img/cupcake3.png">
+					<img src="img/cupcake4.png">
+					<img src="img/cupcake1.png">
+					<img src="img/cupcake2.png">
+					<img src="img/cupcake3.png">
+					<img src="img/cupcake4.png">
+					<img src="img/cupcake1.png">
+					<img src="img/cupcake2.png">
+					<img src="img/cupcake3.png">
+					<img src="img/cupcake4.png">
+					<img src="img/cupcake1.png">
+					<img src="img/cupcake2.png">
+					<img src="img/cupcake3.png">
+					<img src="img/cupcake4.png">
+				</section>
+			 
+				<section>
+					<h3>Static Positioning</h3>
+					<p>In normal flow, block boxes flow from top to bottom, making a new line after every box.</p>
+<pre><code class="xml">&lt;p>Greetings&lt;/p>
+&lt;p>Hello&lt;/p>
+&lt;p>Hi there!&lt;/p></code></pre>
+					<div class ="left-align">
+						<p>Greetings</p>
+						<p>Hello</p>
+						<p>Hi there!</p>
+					</div>
+				</section>
+
+				<!-- Exercise-->
+				<section>
+					<h3>Let's Develop It</h3>
+					<p>Let's create some staticly positioned <code>div</code>s</p>
+<pre><code class="xml">&lt;div class="div-a"&gt;A&lt;/div&gt;
+&lt;div class="div-b"&gt;B&lt;/div&gt;
+&lt;div class="div-c"&gt;C&lt;/div&gt;</code></pre>
+					<p>Let's give those <code>div</code>s some style! Make one red, one gray, and one blue. Give each the same margin, padding, and width like below.</p>
+<pre><code class="css">.div-a {
+	background-color: red;
+	color: white;
+	margin: 5%;
+	padding: 40px;
+	width: 20%;
+}</code></pre>				 
+				</section>
+			 
+			 <!-- Relative Positioning-->
+				<section>
+					<h3>Relative Positioning</h3>
+					<ul class="align-left">
+						<li>Takes the element out of the normal flow, allowing it to be moved to the top, left, right or bottom. </li>
+						<li>Does not affect the elements surrounding it.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Relative Positioning</h3>
+					<p>The relative value keeps an element in the normal flow, but offsets it according to top/left/right/bottom properties.</p>
+<pre><code class="css">.relative {
+	position: relative; 
+	left: 80px; 
+	top: 20px;
+	height: 100px; 
+	background-color: yellow;
+}</code></pre>
+					<div style="border:2px solid black;">
+						<div style="position:relative;left:80px;top:20px;height:100px;background-color:pink;color:black;text-align:left;">
+							Hello, hi!
+						</div>
+					</div>
+				</section>
+
+				<!-- Exercise-->
+				<section>
+					<h3>Let's Develop It</h3>
+					<p>Let's make our second <code>.div-b</code> relatively positioned.</p>
+<pre><code>.div-b {
+	background-color: gray;
+	color: white;
+	margin: 5%;
+	padding: 40px;
+	position: relative: 
+	top: -.5em;
+	right: 10%;
+	bottom: auto;
+	left: auto;
+	width: 20%;
+}</code></pre>
+					<p>Once it is relatively positioned, we can add top, right, bottom, and left as indicated above to offset it from the normal flow.</p>
+				</section>
+			 
+				<!-- Absolute positioning-->
+				<section >
+					<h3>Absolute Positioning</h3>
+					<ul class="align-left">
+						<li>Positions element outside of the normal flow.</li>
+						<li>An absolutely positioned element is offset from its container block</li>
+						<li>Its container block is the first element that has a position other than static.</li>
+						<li>If no such element is found, the container block is <code>&lt;html></code>.</li>
+						<li>Other elements act as if it's not there.</li>
+						<li>Determined by its offset values in the properties top, bottom, right and left.</li>
+					</ul>
+				</section>
+			 
+				<section  style="border: 1px solid black">
+					<h3>Absolute Positioning</h3>
+					<p>The absolute value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
+<pre><code class="css">.top {
+	position: absolute; 
+	top: -40px; 
+	right: 10px; 
+	background-color: yellow;
+}</code></pre>
+<pre><code class="css">.bottom {
+	position: absolute; 
+	bottom: -40px; 
+	left:60px; 
+	background-color: green;
+	color: white;
+}</code></pre>
+					<div>
+						<div style="position:absolute;top:-40px;right:10px;background-color:yellow;color:black">
+							Up here
+						</div>
+						<div style="position:absolute;bottom:-40px;left:60px;background-color:green;color:white;">
+							Down here
+						</div>
+					</div>
+				</section>
+
+				<!-- Exercise-->
+				<section>
+					<h3>Let's Develop It</h3>
+					<p>Let's make our third <code>.div-c</code> absolutely positioned to the top of the containing element.</p>
+<pre><code>.div-c {
+	background-color: blue;
+	color: white;
+	margin: 5%;
+	padding: 40px;
+	position: absolute;
+	top: 0;
+	right: auto;
+	bottom: auto;
+	left: auto;
+	width: 20%;
+}</code></pre>
+					<p>If there is no containing element for <code>div-c</code>, the containing element is <code>&lt;html></code></p>
+				</section>
+
+				<section>
+					<h3>More: Absolute Positioning</h3>
+					<div class="left left-align" style="width: 45%;">
+						<p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
+						<p>The containing <code>div</code> has a position of relative, and the caption has a position of absolute.</p>
+					</div>
+					<div class="right" style="width: 45%;">
+						<img src="img/example-absolute.png" class="plain">
+					</div>
+				</section>
+
+				<section>
+					<h3>Z-index</h3>
+					<div class="align-left">
+						<p>When you use positioning to move elements out of the normal flow of content, elements can overlap. You can change the order of overlapping with <code>z-index</code>.</p>
+						<p>The element with highest <code>z-index</code> goes on top.</p>
+					</div>
+<pre><code class="css">.bottom {
+	position: absolute; 
+	bottom: 10px; 
+	left:60px; 
+	background-color: yellow;
+}</code></pre>
+<pre><code class="css">.top {
+	position: absolute; 
+	bottom: 15px; 
+	left:60px; 
+	background-color: green; 
+	z-index: 2;
+}</code></pre>
+					<div style="position:absolute;bottom:-20px;left:60px;background-color:yellow;color:black"> 
+						Bottom
+					</div>
+					<div style="position:absolute;bottom:-15px;left:60px;background-color:green;z-index:2;">
+						Top
+					</div>
+				</section>
+
+				<section>
+					<h3>Let's Develop it!</h3>
+					<p>Let's add some more positioning.</p>
+					<ol class="align-left">
+						<li>Let's create a <code>div</code> with a class of <code>pos</code>. Position the <code>div</code> relatively.</li>
+						<li>Add a medium-sized image inside the <code>div</code> with a caption. The caption should have a class of <code>caption</code>.</li>
+						<li>Position that caption absolutely over the image.</li>
+					</ol>
+<pre><code>.pos {
+	background-color: yellow;
+	padding: 0;
+	position: relative;
+	top: 0;
+	width: 20%;
+}
+.caption {
+	position: absolute;
+	top: -2em;
+	width: 80%;
+	z-index: 9;
+}</code></pre>
+				</section>
+
+				<!-- Float-->
+				<section>
+					<h3>Float</h3>
+					<ul class="align-left">
+						<li>Floating an element takes it in the normal flow, as far to the left or right of its containing element as possible.</li>
+						<li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
+						<li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
+						<li>You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.</li>
+					</ul>
+				</section>
+
+				<!--example float-->
+				<section>
+					<h3>Float: Example</h3>
+					<p>Below a <code>&lt;blockquote></code> is floated to the left, allowing text to wrap around it on the right</p>
+					<img src="img/example-floatbq.png" class="plain">
+				</section>
+
+				<section>
+					<h3>Float</h3>
+<pre><code class="css">.float {
+	float:left;
+	width:200px;
+	background:yellow;
+}</code></pre>
+					<div class="align-left" style="float:left;width:200px;background:yellow;color:black;padding:10px;">
+						<small>Hi, I'm a yellow box with black text.<br/>
+						I like to hang out on the left side.</small><br/>
+					</div>
+					<div class="align-left">Not floating element</div>
+					<div class="align-left">Not floating element</div>
+					<div class="align-left">Not floating element with wrapping Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+				</section>
+			 
+				<section>
+					<h3>Side by side elements</h3>	
+					<p>If you want two block level elements to be side by side, you may float both elements. One left, and one right.</p>
+					<img src="img/example-float-column.png" class="plain">
+				</section>
+
+				<section>
+					<h3>Side by side elements</h3> 
+					<p>If you want two or more block level elements to be side by side, you can use <code>float: left</code> on all the elements.</p>
+					<img src="img/example-left-float.jpg" style="float:left;">
+					<img src="img/example-left-float.jpg" style="float:left;">
+					<img src="img/example-left-float.jpg" style="float:left;">
+					<p>But how do you stop the floating?</p>
+				</section>
+
+				<!-- Clear-->
+				<section>
+					<h3>Clear</h3>
+					<ul>
+						<li>Clearing tells the element on which side (right, left, both) other elements <strong>cannot</strong> appear. </li>
+						<li>If you had an image floated left, and you did not want the paragraph to appear next to it, you would add <code>clear: left;</code> to the paragraph.</li>
+						<li>Clearing both sides makes sure ﬂoats don’t ﬂow past the clear element.</li>
+					</ul>
+<pre><code class="css">clear: right;
+clear: left;
+clear: both;</code></pre>
+				</section> 
+			 
+				<section>
+					<h3>Clear</h3>
+<pre><code class="css">.float {
+	float: left;
+	width: 100px;
+	background: yellow;
+}
+.clear-left{
+	clear: left
+}</code></pre>
+					<div style ="float:left;width:100px;background:yellow; color:black; ">
+						hi<br/>
+						hi<br/>
+						hi<br/>
+					</div>
+					<div class="align-left">Not floating element</div>
+					<div class="align-left">Not floating element</div>
+					<div class="align-left" style="clear:left;">Non-floating element with a class of <code>.clear-left</code></div>
+				</section>
+		 
+				<!-- Exercise -->
+				<section>
+					<h3>Let's Develop It</h3>
+					<p>Let's float our sidebar and content areas so that they are side-by-side</p>
+					<ol>
+						<li>Remember width = element width + padding + border</li>
+						<li>You may have to make the width smaller so everything fits</li>
+						<li>The header <code>div</code> should appear above and the footer <code>div</code> below the sidebar and content area.
+					</ol>
+				</section>       
+
+				<!-- Question -->
+				<section>
+					<h2>Questions?</h2>
+				</section>
+
+				<section>
+					<h2>Keep in Touch</h2>
+					<a href="http://gdila.org/">GDILA.org</a> | 
+					<a href="https://www.facebook.com/groups/gdila/">Facebook</a> | 
+					<a href="https://twitter.com/girldevelopitla">Twitter</a>
+					<br/><br/>
+					<h2>More Learning</h2>
+					<a href="http://www.meetup.com/Girl-Develop-It-Los-Angeles/">Upcoming Girl Develop It Classes</a>
+				</section>
+
+				<section>
+					<h2>You are all AWESOME!</h2>
+					<p>Give yourself a hand for making it through <br/>
+					HTML &amp; CSS 101!</p>
+					<img src="img/awesome.gif">
+				</section>
+
+				<!-- Survey Link -->
+				<section>
+					<h2>Survey </h2>
+					<p>Please let us know how you liked the class and any suggestions you may have before you leave. Thank you! :)</p>
+					<p><a style="font-size:1.5em;" href="https://goo.gl/oRUYso">https://goo.gl/oRUYso</a></p>
+					<p>I will send an email in the next day with the example files and PDF. Thank you for being a part of this class!</p>
+					<p>Class files and slides will be available at:<br/>
+					<a href="http://gdila.org/html101">gdila.org/html101</a></p>
+				</section>
+
+			</div>
+			<footer>
+				<div class="copyright">
+					HTML and CSS 101 -- Los Angeles --
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+				</div>
+			</footer>
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+						Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+										{ src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
